@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "lib": [
+      "esnext"
+    ],
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "declaration": true,
+    "newLine": "lf",
+    "jsx": "react"
+  },
+  "include": [
+    "src"
+  ]
+}
+
