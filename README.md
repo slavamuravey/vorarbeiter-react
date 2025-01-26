@@ -1,3 +1,10 @@
+<p align="center">
+  <img
+      alt="Vorarbeiter React bindings"
+      src="https://repository-images.githubusercontent.com/922215583/2cc868f1-251f-40fe-9124-14ddcbb33b86"
+  />
+</p>
+
 ## React bindings for Vorarbeiter
 
 ### Installation
