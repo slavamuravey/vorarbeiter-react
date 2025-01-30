@@ -1,6 +1,6 @@
 {
   "name": "vorarbeiter-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/slavamuravey/vorarbeiter-react",
   "description": "React bindings for Vorarbeiter",
   "source": "src/index.tsx",
