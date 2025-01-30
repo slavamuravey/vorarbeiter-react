@@ -1,4 +1,4 @@
-import React, { createContext, useContext, FC, PropsWithChildren, ComponentType } from "react";
+import React, { ComponentType, createContext, FC, PropsWithChildren, useContext } from "react";
 import { ServiceContainer } from "vorarbeiter";
 
 export interface ServiceContainerContextValue extends ServiceContainer {}
@@ -25,9 +25,9 @@ export interface WithServiceContainerProps {
 export function withServiceContainer<T extends WithServiceContainerProps = WithServiceContainerProps>(
   WrappedComponent: ComponentType<T>
 ) {
-  const WithServiceContainer = (props: Omit<T, keyof WithServiceContainerProps>) => (
-    <WrappedComponent {...(props as T)} serviceContainer={useServiceContainer()} />
-  );
+  function WithServiceContainer(props: Omit<T, keyof WithServiceContainerProps>) {
+    return <WrappedComponent {...(props as T)} serviceContainer={useServiceContainer()} />;
+  }
 
   WithServiceContainer.displayName = `WithVorarbeiter(${WrappedComponent.displayName || (WrappedComponent as { name: string }).name || "Component"})`;
 
