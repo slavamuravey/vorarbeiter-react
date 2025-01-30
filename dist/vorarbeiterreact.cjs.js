@@ -14,7 +14,9 @@ const ServiceContainerProvider = ({ children, serviceContainer }) => {
     return React__default["default"].createElement(ServiceContainerContext.Provider, { value: serviceContainer }, children);
 };
 function withServiceContainer(WrappedComponent) {
-    const WithServiceContainer = (props) => (React__default["default"].createElement(WrappedComponent, Object.assign({}, props, { serviceContainer: useServiceContainer() })));
+    function WithServiceContainer(props) {
+        return React__default["default"].createElement(WrappedComponent, Object.assign({}, props, { serviceContainer: useServiceContainer() }));
+    }
     WithServiceContainer.displayName = `WithVorarbeiter(${WrappedComponent.displayName || WrappedComponent.name || "Component"})`;
     return WithServiceContainer;
 }

@@ -1,4 +1,4 @@
-import React, { FC, PropsWithChildren, ComponentType } from "react";
+import React, { ComponentType, FC, PropsWithChildren } from "react";
 import { ServiceContainer } from "vorarbeiter";
 export interface ServiceContainerContextValue extends ServiceContainer {
 }

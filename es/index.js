@@ -5,7 +5,9 @@ export const ServiceContainerProvider = ({ children, serviceContainer }) => {
     return React.createElement(ServiceContainerContext.Provider, { value: serviceContainer }, children);
 };
 export function withServiceContainer(WrappedComponent) {
-    const WithServiceContainer = (props) => (React.createElement(WrappedComponent, Object.assign({}, props, { serviceContainer: useServiceContainer() })));
+    function WithServiceContainer(props) {
+        return React.createElement(WrappedComponent, Object.assign({}, props, { serviceContainer: useServiceContainer() }));
+    }
     WithServiceContainer.displayName = `WithVorarbeiter(${WrappedComponent.displayName || WrappedComponent.name || "Component"})`;
     return WithServiceContainer;
 }
