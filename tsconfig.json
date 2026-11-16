@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "es6",
+    "target": "es2022",
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "lib": [
       "esnext"
@@ -12,12 +12,10 @@
     "noImplicitAny": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "declaration": true,
     "newLine": "lf",
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src/index.tsx"
   ]
 }
-
