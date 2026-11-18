@@ -39,6 +39,10 @@
     "url": "https://github.com/slavamuravey/vorarbeiter-react"
   },
   "license": "MIT",
+  "engines": {
+    "node": ">=22.21.0"
+  },
+  "packageManager": "npm@11.20.0",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "@types/react": "^19.0.8",
